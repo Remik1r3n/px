@@ -9,6 +9,13 @@ Proxy configurations often involve setting environment variables like HTTP_PROXY
 ## Solution
 The script addresses this issue by comprehensively setting a wide range of proxy-related environment variables in both uppercase and lowercase forms. This guarantees that most programs can effectively identify the proxy settings regardless of their case sensitivity.
 
+HINT: It is **strongly** recommended that you add these environments to your SUDOERS's env_keep.
+
+Example for doing this:
+```
+Defaults env_keep += "http_proxy https_proxy all_proxy no_proxy HTTP_PROXY HTTPS_PROXY ALL_PROXY NO_PROXY"
+```
+
 ## How to use
 For one-time use, just copy-paste into your terminal and you should have px and unpx command.
 
