@@ -13,6 +13,9 @@ px () {
   
   export no_proxy="localhost,127.0.0.1,.local,.lan"
   export NO_PROXY="localhost,127.0.0.1,.local,.lan"
+
+  echo ">>> Proxy set to $http_proxy."
+
 }
 
 unpx () {
@@ -27,4 +30,7 @@ unpx () {
 
   unset no_proxy
   unset NO_PROXY
+
+  echo ">>> Proxy off."
+
 }
